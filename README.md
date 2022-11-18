@@ -66,3 +66,8 @@ It takes a argument but it's recommanded to just keep it empty. I added a `pcall
 handler:request()
 ```
 In the backend all the magic happens at the handler. It's very simple and took little time to make.
+
+# rrkit_sdk functions
+
+## `rrkit_sdk:terminate()`
+The name says it all, this function is used to nil out rrkit_sdk. 
