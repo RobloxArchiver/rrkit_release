@@ -17,7 +17,7 @@ console.print("Hello, World!", 45)
 ```
 This prints it with a magenta background.
 
-## `console.error(text)
+## `console.error(text)`
 This function is used just to separate error messages to normal messages, I only wrote this for my own use but I encourage you to use it to keep code cleaner and easier to read.
 
 ```lua
