@@ -1,3 +1,8 @@
+if rrkit_sdk then
+    console.error("rrkit attempted to load again")
+    return
+end
+
 getgenv().handler = { built_in_commands = {} }
 getgenv().console = { metadata = { default_color = 37 } }
 getgenv().rrkit_sdk = { version = "1.0-release" }
