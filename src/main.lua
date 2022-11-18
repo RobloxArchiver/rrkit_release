@@ -21,7 +21,7 @@ function console.success(text)
     rconsoleprint("\27[32m" .. tostring(text) .. "\27[0m\n")
 end
 
-function console.setName(name, sdk)
+function console.set(name, sdk)
     if name and not sdk then
         rconsolename(tostring(name))
     end
