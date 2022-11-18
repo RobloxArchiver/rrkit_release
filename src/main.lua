@@ -45,8 +45,8 @@ function handler:request(request)
     local request = request or ""
     local commandRequest = request:lower():split(" ")
 
-    for __c,__f in pairs(handler.built_in_commands) do
-        if (__c == commandRequest[1]) then
+    for command,_ in pairs(handler.built_in_commands) do
+        if (command == commandRequest[1]) then
             local success, err = pcall(function()
                 handler.built_in_commands[commandRequest[1]](commandRequest[2] or nil, commandRequest[3] or nil, commandRequest[4] or nil)
             end)
