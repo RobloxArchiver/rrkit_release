@@ -1,11 +1,16 @@
-if rrkit_sdk then
+local VERSION = "1.0-release"
+
+if rrkit_sdk and rrkit_sdk.version == VERSION then
     console.error("rrkit attempted to load again")
+    return
+elseif rrkit_sdk and rrkit_sdk.version > VERSION then
+    console.error("outdated rrkit attempted to laod")
     return
 end
 
 getgenv().handler = { built_in_commands = {} }
 getgenv().console = { metadata = { default_color = 37 } }
-getgenv().rrkit_sdk = { version = "1.0-release" }
+getgenv().rrkit_sdk = { version = VERSION }
 
 function console.print(text, colorcode)
     local text = text or ""
