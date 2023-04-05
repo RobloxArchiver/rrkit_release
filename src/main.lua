@@ -52,7 +52,6 @@ function handler:add(command, callback)
 end
 
 function handler:request(request)
-    local request = request or ""
     local commandRequest = request:lower():split(" ")
 
     for command,_ in pairs(handler.built_in_commands) do
