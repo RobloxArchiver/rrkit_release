@@ -52,6 +52,7 @@ function handler:add(command, callback)
 end
 
 function handler:request(request)
+    local request = request or ""
     local commandRequest = request:lower():split(" ")
 
     for command,_ in pairs(handler.built_in_commands) do
@@ -63,8 +64,6 @@ function handler:request(request)
             if not success and err then
                 console.error(err)
             end
-        else
-            console.error("Sorry '" .. commandRequest[1] .. "' is not a command!")
         end
     end
 
